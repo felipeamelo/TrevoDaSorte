@@ -1,0 +1,72 @@
+<!------------------------------------------------------------------------------>
+<!-- Exibindo imagem de processamento                                         -->
+<!------------------------------------------------------------------------------>
+<div class="vencedores-loading" *ngIf="showSpinner">
+  <mat-progress-spinner class="mat-spinner" mode="indeterminate" strokeWidth="3" diameter="64"></mat-progress-spinner >
+</div>
+
+<!------------------------------------------------------------------------------>
+<div class="vencedores-capa" id="resultados">
+  <!------------------------------------------------------------------------------>
+  <div class="vencedores-titulo">
+    <div class="vencedores-quebra"></div>
+  	<img class="vencedores-fundo" src="./assets/images/Divider_7.svg">
+  </div>
+  <div class="vencedores-topo">
+    <div class="vencedores-meio"></div>
+
+    <!------------------------------------------------------------------------------>
+    <!-- Exibindo os resultados quando dbResults carregado                        -->
+    <!------------------------------------------------------------------------------>
+    <div class="vencedores-conteudo" *ngFor="let dadosvenc of dbResults">
+      <div class="vencedores-capsula">
+        <img src="./assets/images/ResultBackground.svg">
+        <div class="vencedores-texto01"> {{ dadosvenc.fields.numero_01 | number: '2.0' }} | 
+                                         {{ dadosvenc.fields.numero_02 | number: '2.0' }} | 
+                                         {{ dadosvenc.fields.numero_03 | number: '2.0' }} | 
+                                         {{ dadosvenc.fields.numero_04 | number: '2.0' }} | 
+                                         {{ dadosvenc.fields.numero_05 | number: '2.0' }} </div>
+        <div class="vencedores-trevo01"> {{ dadosvenc.fields.trevo_01  | number: '2.0' }} </div>
+        <div class="vencedores-trevo02"> {{ dadosvenc.fields.trevo_02  | number: '2.0' }} </div>
+        <div class="vencedores-texto02"> RESULTADO SORTEIO {{dadosvenc.fields.numero_concurso}} | 
+                                                           {{dadosvenc.fields.data_do_sorteio   | date: 'dd/MM/yy'}}
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------------------------------------------>
+    <!-- Tratamento p/ apresentar msg caso não encontre o backend                 -->
+    <!------------------------------------------------------------------------------>
+    <div class="vencedores-conteudo" *ngIf="errorMsgs > ''">
+      <div class="vencedores-error">
+
+      +-------------------------------------------------------------------------  <br>
+      | <b>Tipo......:</b> ERRO                                                   <br>
+      | <b>Codigo....:</b> 00.01                                                  <br>
+      | <b>Mensagem..:</b> Houve dificuldade ao acessar os resultados!            <br>
+      | <b>Observacao:</b> Já estamos analisando para solucionar esta dificuldade.<br>
+      +-------------------------------------------------------------------------  <br>
+      {{errorMsgs}}        
+      </div>
+    </div>
+
+    <!------------------------------------------------------------------------------>
+    <!-- Tratamento p/ apresentar msg caso não encontre resultados cadastrados    -->
+    <!------------------------------------------------------------------------------>
+    <div class="vencedores-conteudo" *ngIf="nCountRgs === 0 && !(errorMsgs > '')">
+      <div class="vencedores-error">
+      +-------------------------------------------------------------------------<br>
+      | <b>Tipo......:</b> ALERTA                                               <br>
+      | <b>Codigo....:</b> 00.02                                                <br>
+      | <b>Mensagem..:</b> Não existe resultado cadastrado no banco de dados!   <br>
+      | <b>Observacao:</b> Assim que o cadastro for realizado, os resultados    <br>
+      | &nbsp; &nbsp;&nbsp;
+        &nbsp; &nbsp;&nbsp; : serão apresentados aqui. <br>
+      +-------------------------------------------------------------------------
+      </div>
+    </div>
+
+  </div>
+  <!------------------------------------------------------------------------------>
+</div>
+<!------------------------------------------------------------------------------>

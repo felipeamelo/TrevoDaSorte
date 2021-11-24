@@ -1,0 +1,29 @@
+variables:
+  DOCKER_DRIVER: overlay2
+
+stages:
+  - build
+  - image
+
+build:
+  stage: build
+  image: node:latest
+  script:
+    - npm install --unsafe-perm
+    - npm run -- ng build --prod
+  artifacts:
+    paths:
+      - dist
+
+image-prod:
+  stage: image
+  image: docker:stable
+  script:
+    - docker build -f Dockerfile -t registry.spix.pt/trevodasorte-frontend:$CI_COMMIT_REF_NAME dist
+    - docker tag registry.spix.pt/trevodasorte-frontend:$CI_COMMIT_REF_NAME registry.spix.pt/trevodasorte-frontend:latest
+    - docker push registry.spix.pt/trevodasorte-frontend:$CI_COMMIT_REF_NAME
+    - docker push registry.spix.pt/trevodasorte-frontend:latest
+  dependencies:
+    - build
+  only:
+    - master

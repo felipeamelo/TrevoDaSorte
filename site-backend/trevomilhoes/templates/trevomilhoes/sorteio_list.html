@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrevoDaSorte - Sorteios</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<br><br>
+
+<table width="900" border="0" align="center">
+
+    <tr bgcolor="000000" style="color: #FFFFFF" align="center">
+        <td>Concurso</td>
+        <td>Data Sorteio</td>
+        <td>Valor para prêmios</td>
+        <td>Valor do próximo Acumulado</td>
+        <td>Número de apostas registradas</td>
+        <td>1º Número</td>
+        <td>2º Número</td>
+        <td>3º Número</td>
+        <td>4º Número</td>
+        <td>5º Número</td>
+        <td>1º Trevo</td>
+        <td>2º Trevo</td>
+    </tr>
+
+    {% for sorteio in all_sorteio_list %}
+
+    <tr bgcolor="C6C6C6" align="center">
+        <td>{{ sorteio.numero_concurso }}</td>
+        <td>{{ sorteio.data_do_sorteio }}</td>
+        <td>{{ sorteio.valor_dos_premios }}</td>
+        <td>{{ sorteio.valor_prx_acumulado }}</td>
+        <td>{{ sorteio.apostas_registradas }}</td>
+        <td>{{ sorteio.numero_01 }}</td>
+        <td>{{ sorteio.numero_02 }}</td>
+        <td>{{ sorteio.numero_03 }}</td>
+        <td>{{ sorteio.numero_04 }}</td>
+        <td>{{ sorteio.numero_05 }}</td>
+        <td>{{ sorteio.trevo_01 }}</td>
+        <td>{{ sorteio.trevo_02 }}</td>
+    </tr>
+     
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

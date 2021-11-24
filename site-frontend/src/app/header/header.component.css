@@ -1,0 +1,146 @@
+.logo {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 9999;
+  width: 90px;
+  height: 90px;
+}
+
+.facebook {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  width: 35px;
+  height: 35px;
+}
+
+.instagran {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+  z-index: 9999;
+  width: 35px;
+  height: 35px;
+}
+
+/*============================================================================*/
+
+.header-fundo {
+  background-color: transparent;
+  background-image: linear-gradient( rgba(255, 255, 255, 0.4000),
+                                     rgba(255, 255, 255, 0.4707),
+                                     rgba(255, 255, 255, 0.9000));
+}
+
+/*============================================================================*/
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 143, 48, 0.7)' stroke-width='5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*============================================================================*/
+
+.btn-jogar {
+  background-image: url(/assets/images/MenuButton_Sep.svg),
+                    url(/assets/images/MenuButton_Middle.svg);
+  /*-----------------------------------------------------------------*/
+  background-size: auto,
+                   auto;
+  /*-----------------------------------------------------------------*/
+  background-repeat: no-repeat,
+                     repeat;
+  /*-----------------------------------------------------------------*/
+  background-position: right,
+                       left;
+}
+
+.btn-premios {
+  background-image: url(/assets/images/MenuButton_Sep.svg),
+                    url(/assets/images/MenuButton_Middle.svg);
+  /*-----------------------------------------------------------------*/
+  background-size: auto,
+                   auto;
+  /*-----------------------------------------------------------------*/
+  background-repeat: no-repeat,
+                     repeat;
+  /*-----------------------------------------------------------------*/
+  background-position: right,
+                       left;
+}
+
+.btn-vencedores {
+  background-image: url(/assets/images/MenuButton_Sep.svg),
+                    url(/assets/images/MenuButton_Middle.svg);
+  /*-----------------------------------------------------------------*/
+  background-size: auto,
+                   auto;
+  /*-----------------------------------------------------------------*/
+  background-repeat: no-repeat,
+                     repeat;
+  /*-----------------------------------------------------------------*/
+  background-position: right,
+                       left;
+}
+
+.btn-agente {
+  background-image: url(/assets/images/MenuButton_Sep.svg),
+                    url(/assets/images/MenuButton_Middle.svg);
+  /*-----------------------------------------------------------------*/
+  background-size: auto,
+                   auto;
+  /*-----------------------------------------------------------------*/
+  background-repeat: no-repeat,
+                     repeat;
+  /*-----------------------------------------------------------------*/
+  background-position: right,
+                       left;
+}
+
+.btn-perguntas {
+  background-image: url(/assets/images/MenuButton_Middle.svg);
+  /*-----------------------------------------------------------------*/
+  background-size: auto;
+  /*-----------------------------------------------------------------*/
+  background-repeat: repeat;
+  /*-----------------------------------------------------------------*/
+  background-position: left;
+}
+
+
+/*============================================================================*/
+
+.img-left-botao {
+  height: 40px;
+  float: right;
+}
+
+.btn-left-texto {
+  width: 96%;
+  float: right;
+}
+
+.btn-left-borda {
+  width: 04%;
+  float: right;
+}
+
+/*============================================================================*/
+
+.img-right-botao {
+  height: 40px;
+  float: left;
+}
+
+.btn-right-texto {
+  width: 96%;
+  float: left;
+}
+
+.btn-right-borda {
+  width: 04%;
+  float: left;
+}
+
+/*============================================================================*/

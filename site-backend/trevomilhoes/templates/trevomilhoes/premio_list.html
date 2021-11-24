@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrevoDaSorte - Prêmios</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<br><br>
+
+<table width="700" border="0" align="center">
+    <tr bgcolor="000000" style="color: #FFFFFF">
+        <td>Prêmios</td>
+        <td>Acertos</td>
+        <td>Números de vencedores</td>
+        <td>Valor do prêmio</td>
+    </tr>
+
+        {% for premio in all_premio_list %}
+        <tr>
+            <td>1º Prêmio</td>
+            <td>5 Números + 2 Trevos</td>
+            <td>{{ premio.qtd_venc_01 }}</td>
+            <td>{{ premio.vlr_premio_01 }}</td>
+        </tr>
+        <tr bgcolor="C6C6C6">
+            <td>2º Prêmio</td>
+            <td>5 Números + 1 Trevos</td>
+            <td>{{ premio.qtd_venc_02 }}</td>
+            <td>{{ premio.vlr_premio_02 }}</td>
+        </tr>
+        <tr>
+            <td>3º Prêmio</td>
+            <td>5 Números + 0 Trevos</td>
+            <td>{{ premio.qtd_venc_03 }}</td>
+            <td>{{ premio.vlr_premio_03 }}</td>
+        </tr>
+        <tr bgcolor="C6C6C6">
+            <td>4º Prêmio</td>
+            <td>4 Números + 2 Trevos</td>
+            <td>{{ premio.qtd_venc_04 }}</td>
+            <td>{{ premio.vlr_premio_04 }}</td>
+        </tr>
+        <tr>
+            <td>5º Prêmio</td>
+            <td>4 Números + 1 Trevos</td>
+            <td>{{ premio.qtd_venc_05 }}</td>
+            <td>{{ premio.vlr_premio_05 }}</td>
+        </tr>
+        <tr bgcolor="C6C6C6">
+            <td>6º Prêmio</td>
+            <td>3 Números + 2 Trevos</td>
+            <td>{{ premio.qtd_venc_06 }}</td>
+            <td>{{ premio.vlr_premio_06 }}</td>
+        </tr>
+        <tr>
+            <td>7º Prêmio</td>
+            <td>4 Números + 0 Trevos</td>
+            <td>{{ premio.qtd_venc_07 }}</td>
+            <td>{{ premio.vlr_premio_07 }}</td>
+        </tr>
+        <tr bgcolor="C6C6C6">
+            <td>8º Prêmio</td>
+            <td>2 Números + 2 Trevos</td>
+            <td>{{ premio.qtd_venc_08 }}</td>
+            <td>{{ premio.vlr_premio_08 }}</td>
+        </tr>
+        <tr>
+            <td>9º Prêmio</td>
+            <td>3 Números + 1 Trevos</td>
+            <td>{{ premio.qtd_venc_09 }}</td>
+            <td>{{ premio.vlr_premio_09 }}</td>
+        </tr>
+        <tr bgcolor="C6C6C6">
+            <td>10º Prêmio</td>
+            <td>3 Números + 0 Trevos</td>
+            <td>{{ premio.qtd_venc_10 }}</td>
+            <td>{{ premio.vlr_premio_10 }}</td>
+        </tr>
+        <tr>
+            <td>11º Prêmio</td>
+            <td>1 Números + 2 Trevos</td>
+            <td>{{ premio.qtd_venc_11 }}</td>
+            <td>{{ premio.vlr_premio_11 }}</td>
+        </tr>
+        <tr bgcolor="C6C6C6">
+            <td>12º Prêmio</td>
+            <td>2 Números + 1 Trevos</td>
+            <td>{{ premio.qtd_venc_12 }}</td>
+            <td>{{ premio.vlr_premio_12 }}</td>
+        </tr>
+        <tr>
+            <td>13º Prêmio</td>
+            <td>2 Números + 0 Trevos</td>
+            <td>{{ premio.qtd_venc_13 }}</td>
+            <td>{{ premio.vlr_premio_13 }}</td>
+        </tr>
+        {% endfor %}
+
+</table>
+
+</body>
+</html>

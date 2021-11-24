@@ -1,0 +1,45 @@
+.premios-capa {
+	width: 100%;
+}
+
+.premios-topo {
+	width: 100%;
+	position: relative;
+}
+
+/*--------------------------------------------------------*/
+.premios-titulo {
+	width: 100%;
+	position: relative;
+	padding-top: 50px;
+	background-color: #008F30;
+}
+
+.premios-quebra {
+	top:-1px;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: #008F30;
+}
+
+.premios-fundo {
+	width: 100%;
+	padding-top: 10px;
+	background-color: #008F30;
+}
+
+.premios-meio {
+	top:-1px;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: white;
+}
+
+.premios-conteudo {
+	width: 100%;
+	background-color: white;
+	padding-bottom: 10px;
+}
+/*--------------------------------------------------------*/

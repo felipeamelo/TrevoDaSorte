@@ -1,0 +1,45 @@
+.agente-capa {
+	width: 100%;
+}
+
+.agente-topo {
+	width: 100%;
+	position: relative;
+}
+
+/*--------------------------------------------------------*/
+.agente-titulo {
+	width: 100%;
+	position: relative;
+	padding-top: 50px;
+	background-color: #008F30;
+}
+
+.agente-quebra {
+	top:-1px;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: #008F30;
+}
+
+.agente-fundo {
+	width: 100%;
+	padding-top: 10px;
+	background-color: #008F30;
+}
+
+.agente-meio {
+	top:-1px;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background-color: white;
+}
+
+.agente-conteudo {
+	width: 100%;
+	background-color: white;
+	padding-bottom: 10px;
+}
+/*--------------------------------------------------------*/
